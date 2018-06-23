@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title CoderDojo Sign In Sheet
+    link(rel="stylesheet", href="../../../stylesheets/normalize.css")
+    link(rel="stylesheet", href="../../../stylesheets/skeleton.css")
+    link(rel="stylesheet", href="../../../stylesheets/day.css")
+  body
+    h1 #{day}
+    ul
+      li
+        div Name
+        div Sign In Time
+        div Sign Out Time
+      each val in table
+        li
+          div=val.name
+          div=val.signin || "N/A"
+          div=val.signout || "N/A"

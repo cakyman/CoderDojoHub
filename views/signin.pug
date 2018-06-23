@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title CoderDojo Sign In Sheet
+    link(rel="stylesheet", href="stylesheets/normalize.css")
+    link(rel="stylesheet", href="stylesheets/skeleton.css")
+    link(rel="stylesheet", href="stylesheets/style.css")
+  body
+    form(class="top bar", method="post", action="/")  
+      input(class="name", type="text", id="nameForm", name="name", onkeydown="change(false)", max-length="20")
+      input(type="hidden", id="hidden", name="type", value="signin")
+      button(type="submit", class="sign in button", id="signbutton") Sign In
+    ul(class="name list")
+      li(class="heading")
+        div Name
+        div Sign In
+        div Sign Out
+      each val in table
+      - var signin = moment(val.signout, "x").calendar() || "N/A"
+      - var signout = moment(val.signout, "x").calendar() || "N/A"
+        li(onclick=`change(true, "${val.name}")`)
+          div=val.name
+          div=moment(val.signin, "x").calendar() || "N/A"
+          div=signout == "Invalid date" ? "N/A" : signout
+    script(src="javascript/signin.js")
+
+      

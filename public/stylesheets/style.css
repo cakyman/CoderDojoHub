@@ -1,0 +1,82 @@
+
+.name.list {
+  list-style-type: none;
+  background: lightgrey;
+  /* padding: 5px; */
+}
+.name.list li {
+  margin-bottom: 5px;
+}
+.name.list .seperator {
+  width: 90%;
+  margin-left: auto;
+  height: 2px;
+  background: white;
+  margin-right: auto;
+}
+
+.name.list div {
+  padding: 5px;
+}
+
+.name.list li:hover {
+  cursor: pointer;
+  background: darkgrey;
+}
+
+.name.list li.heading {
+  background: white;
+  font-weight: bold;
+}
+
+.name.list li.heading:hover {
+  cursor: default;
+  background: white;
+}
+
+
+.sign.in.button {
+  margin-bottom: 0;
+  border-color: #331d57;
+  background: #6e4495;
+  color: white;
+  transition: background 0.1s ease-in-out;
+}
+
+.sign.in.button:hover {
+  border-color: #573572;
+  background: #9d6fc9;
+}
+
+.sign.in.button:active {
+  border-color: #331d57;
+  background: #6e4495;
+}
+
+
+input.name {
+  flex: 1;
+  margin: 0 3px 0 0;
+}
+
+a:hover {
+  cursor: pointer;
+}
+.name.list a {
+  color: black;
+}
+
+.top.bar {
+  margin: 5px;
+  display: flex;
+}
+
+ul li {
+  display: flex;
+  margin:0;
+}
+
+ul li div {
+  flex: 0.5;
+  border-bottom: 1px solid grey;
+}
