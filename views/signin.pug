@@ -19,8 +19,8 @@ html(lang="en")
         div Sign In
         div Sign Out
       each val in table
-      - var signin = moment(val.signout, "x").calendar() || "N/A"
-      - var signout = moment(val.signout, "x").calendar() || "N/A"
+        - var signin = moment(val.signout, "x").calendar() || "N/A"
+        - var signout = moment(val.signout, "x").calendar() || "N/A"
         li(onclick=`change(true, "${val.name}")`)
           div=val.name
           div=moment(val.signin, "x").calendar() || "N/A"
